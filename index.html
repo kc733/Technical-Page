@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<! -- made by kc733 (Alexander Fomin) -->
+	<title>C++ Docs</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<! -- navbar -->
+	<nav id="navbar">
+		<header>
+			<h1>C++ Docs</h1>
+			<h3>A compilation with personal notes on the C++ language</h3>
+		</header>
+		<ul>
+			<li><a href="#Introduction" class="nav-link">Introduction</a></li>
+			<li><a href="#Hello_World" class="nav-link">Hello World</a></li>
+			<li><a href="#Variables" class="nav-link">Variables</a></li>
+			<li><a href="#Variable_of_Scope" class="nav-link">Variable of Scope</a></li>
+			<li><a href="#Constants" class="nav-link">Constants</a></li>
+		</ul>
+	</nav>
+	<main id="main-doc">
+		<! -- DOCUMENTATION -->
+		<section class="main-section" id="Introduction">
+			<header id="Introduction"><h2>Introduction</h2></header>
+			<p>C++ is a general-purpose programming language created by Danish computer scientist Bjarne Stroustrup as an extension of the C programming language, or "C with Classes".</p>
+			<p>The language has expanded significantly over time, and modern C++ now has object-oriented, generic, and functional features in addition to facilities for low-level memory manipulation.</p>
+			<p>It is almost always implemented as a compiled language, and many vendors provide C++ compilers, including the Free Software Foundation, LLVM, Microsoft, Intel, Oracle, and IBM, so it is available on many platforms.</p>
+			<h3>What is C++ used for?</h3>
+			<ul>
+				<li>Operating systems</li>
+				<li>Game development</li>
+				<li>IoT devices</li>
+				<li>Databases</li>
+				<li>Web Browsers</li>
+				<li>Machine learning tools</li>
+			</ul>
+			<p>And much more...</p>
+		</section>
+		<section class="main-section" id="Hello_World">
+			<header id="Hello_World"><h2>Hello World</h2></header>
+			<p>The “Hello World” program is the first step towards learning any programming language and is also one of the simplest programs you will learn. All you have to do is display the message “Hello World” on the screen. Let us now look at the program: </p>
+			<p>
+				<pre>
+					<code>
+						#include < iostream >
+						using namespace std;
+
+						int main()
+						{
+							cout << "Hello World";
+
+							return 0;
+						}
+					</code>
+				</pre>
+			</p>
+		</section>
+		<section class="main-section" id="Variables">
+			<header id="Variables"><h2>Variables</h2></header>
+			<p>A variable is a name given to a memory location. It is the basic unit of storage in a program. </p>
+			<p>Rules For Declaring Variable:</p>
+			<p>
+				<pre>
+					<code>
+						type variable_name;
+
+						type variable1, variable2, variable3;
+					</code>
+				</pre>
+			</p>
+			<p>A variable name can consist of alphabets (both upper and lower case), numbers and the underscore ‘_’ character. However, the name must not start with a number.</p>
+			<p>
+				<pre>
+					<code>
+						// Declaring float variable
+						float simpleInterest; 
+
+						// Declaring integer variable
+						int time, speed; 
+
+						// Declaring character variable
+						char var; 
+					</code>
+				</pre>
+			</p>
+		</section>
+		<section class="main-section" id="Variable_of_Scope">
+			<header id="Variable_of_Scope"><h2>Variable of Scope</h2></header>
+			<p>In general, the scope is defined as the extent up to which something can be worked with. In programming also the scope of a variable is defined as the extent of the program code within which the variable can be accessed or declared or worked with. There are mainly two types of variable scopes:</p>
+			<ol>
+				<li>Local Variables</li>
+				<li>Global Variables</li>
+			</ol>
+			<h3>Local Variables</h3>
+			<p>Variables defined within a function or block are said to be local to those functions.</p>
+			<p>
+				<pre>
+					<code>
+						#include < iostream >
+						using namespace std;
+						 
+						void func()
+						{
+						    int age=18;
+						}
+						 
+						int main()
+						{
+						    cout << "Age is: " << age;
+						     
+						    return 0;
+						}
+					</code>
+				</pre>
+			</p>
+			<h3>Global Variables</h3>
+			<p>As the name suggests, Global Variables can be accessed from any part of the program.</p>
+			<p>
+				<pre>
+					<code>
+						#include < iostream >
+						using namespace std;
+						
+						int global = 5;
+						
+						void display()
+						{
+						    cout << global << endl;
+						}
+						 
+						int main()
+						{
+						    display();
+
+						    global = 10;
+						    display();
+						}
+					</code>
+				</pre>
+			</p>
+		</section>
+		<section class="main-section" id="Constants">
+			<header id="Constants"><h2>Constants</h2></header>
+			<p>In C/C++ program we can define constants in two ways as shown below: </p>
+			<ol>
+				<li>Using #define preprocessor directive</li>
+				<li>Using a const keyword</li>
+			</ol>
+			<h3>Using #define</h3>
+			<p>
+				<pre>
+					<code>
+						#define identifierName value
+					</code>
+				</pre>
+			</p>
+			<h3>Using const keyword</h3>
+			<p>
+				<pre>
+					<code>
+						#include < iostream >
+						using namespace std;
+						   
+						int main() {
+						    // int constant
+						    const int intVal = 10; 
+						  
+						    // Real constant
+						    const float floatVal = 4.14;
+						   
+						    // char constant 
+						    const char charVal = 'A'; 
+						  
+						    // string constant
+						    const string stringVal = "ABC"; 
+						       
+						    cout << "Integer Constant: " << intVal << "\n"; 
+						    cout << "Floating point Constant: " << floatVal << "\n"; 
+						    cout << "Character Constant: "<< charVal << "\n"; 
+						    cout << "String Constant: "<< stringVal << "\n";
+						       
+						    return 0; 
+						}
+					</code>
+				</pre>
+			</p>
+		</section>
+	</main>
+</body>
+</html>
